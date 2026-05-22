@@ -10,6 +10,8 @@ type LeadPayload = {
   userAgent?: string;
   website?: string;
   _gotcha?: string;
+  projectType?: string;
+  projectDetails?: string;
   [key: string]: unknown;
 };
 
@@ -81,6 +83,8 @@ function buildTelegramMessage(lead: {
   source: string;
   page_url: string;
   referrer: string;
+  project_type?: string;
+  project_details?: string;
 }) {
   const submittedAt = new Date().toLocaleString("en-US", {
     dateStyle: "medium",
@@ -94,6 +98,8 @@ function buildTelegramMessage(lead: {
     `Name: ${lead.name || "Not provided"}`,
     `Email: ${lead.email}`,
     `Source: ${lead.source}`,
+    ...(lead.project_type ? [`Project Type: ${lead.project_type}`] : []),
+    ...(lead.project_details ? [`Project Details: ${lead.project_details}`] : []),
     `Page: ${lead.page_url || "Unknown page"}`,
     `Referrer: ${lead.referrer || "Direct / unknown"}`,
     `Lead ID: ${lead.id}`,
@@ -108,6 +114,8 @@ async function notifyTelegram(lead: {
   source: string;
   page_url: string;
   referrer: string;
+  project_type?: string;
+  project_details?: string;
 }) {
   const token = Deno.env.get("TELEGRAM_BOT_TOKEN");
   const chatId =
@@ -198,7 +206,11 @@ Deno.serve(async (req) => {
 
   EdgeRuntime.waitUntil(
     (async () => {
-      const telegram = await notifyTelegram(insertedLead);
+      const telegram = await notifyTelegram({
+        ...insertedLead,
+        project_type: clean(body.projectType, 200),
+        project_details: clean(body.projectDetails, 1000),
+      });
       await supabase
         .from("owner_stack_leads")
         .update({

@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>For Hire | OwnYourWeb</title>
+    <meta
+      name="description"
+      content="Hire a designer to build the visual system, campaign assets, and web infrastructure your business needs to look real and collect leads."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="for-hire-page">
+    <main class="for-hire-shell">
+      <section class="for-hire-hero">
+        <div class="for-hire-copy">
+          <p class="eyebrow">For Hire</p>
+          <h1>Businesses need designers again.</h1>
+          <p class="lede">
+            ChatGPT can draft ideas. It cannot own the taste, layout, polish, print files,
+            campaign system, or business flow. That is where I come in.
+          </p>
+          <div class="hire-actions" aria-label="For hire actions">
+            <a class="button-link button-lime" href="#hireForm">Start a Project</a>
+            <a class="button-link button-paper" href="https://ownyourweb.xyz">View OwnYourWeb</a>
+          </div>
+        </div>
+
+        <figure class="hire-poster">
+          <img
+            src="./assets/owner-stack-cover.png"
+            alt="The Owner Stack poster showing logo, domain, lead form, payment flow, and email list blocks."
+          />
+        </figure>
+      </section>
+
+      <section class="hire-marquee" aria-label="Designer availability">
+        <span>For Hire</span>
+        <span>Brand Systems</span>
+        <span>Campaign Design</span>
+        <span>Web Infrastructure</span>
+        <span>Lead Capture</span>
+      </section>
+
+      <section class="hire-proof">
+        <div class="section-head">
+          <p class="eyebrow">What I Build</p>
+          <h2>Not just graphics. Business assets that move.</h2>
+          <p>
+            I help businesses stop looking pieced together online. The goal is a complete
+            visual rollout that makes attention useful: clear identity, strong campaign assets,
+            a website path, a lead form, a payment route, and a follow-up list.
+          </p>
+        </div>
+
+        <div class="hire-grid">
+          <article class="hire-card accent-lime">
+            <span>01</span>
+            <h3>Logo + Identity</h3>
+            <p>Marks, colors, type, visual direction, and brand rules that make the business recognizable.</p>
+          </article>
+          <article class="hire-card accent-orange">
+            <span>02</span>
+            <h3>Flyers + Campaigns</h3>
+            <p>Event flyers, promo graphics, rollout visuals, social posts, ads, and launch assets.</p>
+          </article>
+          <article class="hire-card accent-red">
+            <span>03</span>
+            <h3>Website + Forms</h3>
+            <p>Landing pages, offer pages, lead capture, inquiry forms, and conversion-ready structure.</p>
+          </article>
+          <article class="hire-card accent-blue">
+            <span>04</span>
+            <h3>Payment Flow</h3>
+            <p>Payment links, checkout routes, paid offer pages, and clean handoff after the sale.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="hire-split">
+        <div>
+          <p class="eyebrow">Why Now</p>
+          <h2>AI made more noise. Real design still makes trust.</h2>
+        </div>
+        <div class="hire-list">
+          <p>Businesses are realizing prompts do not replace composition, typography, taste, context, or delivery.</p>
+          <p>They need someone who can take a rough idea and turn it into a finished system customers can understand.</p>
+          <p>If you need the work to look official, print correctly, launch online, and capture leads, I am available.</p>
+        </div>
+      </section>
+
+      <section class="hire-packages">
+        <div class="section-head">
+          <p class="eyebrow">Available For</p>
+          <h2>Fast builds. Clean systems. Real delivery.</h2>
+        </div>
+        <div class="package-grid">
+          <article>
+            <h3>Starter Design Push</h3>
+            <p>One strong piece of visual work for a flyer, event, promo, product, or campaign.</p>
+          </article>
+          <article>
+            <h3>Owner Stack Build</h3>
+            <p>Identity, landing page, form, payment route, and follow-up structure for a serious offer.</p>
+          </article>
+          <article>
+            <h3>Monthly Creative Support</h3>
+            <p>Ongoing graphics, campaign updates, web edits, and rollout support for businesses moving fast.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="hire-form-section" id="hireForm">
+        <div class="section-head">
+          <p class="eyebrow">Start Here</p>
+          <h2>Tell me what you need designed.</h2>
+          <p>Send the project, deadline, and where the design needs to live: web, print, social, email, or all of it.</p>
+        </div>
+
+        <form id="forHireForm" class="hire-form" method="post">
+          <input type="hidden" name="source" value="For Hire Landing Page" />
+          <label class="honeypot" aria-hidden="true">
+            Website
+            <input name="website" tabindex="-1" autocomplete="off" />
+          </label>
+          <label>
+            Name
+            <input name="name" autocomplete="name" required placeholder="Your name" />
+          </label>
+          <label>
+            Email
+            <input name="email" type="email" autocomplete="email" required placeholder="you@example.com" />
+          </label>
+          <label>
+            Project Type
+            <select name="projectType" required>
+              <option value="">Choose one</option>
+              <option>Logo / identity</option>
+              <option>Flyer / event graphics</option>
+              <option>Website / landing page</option>
+              <option>Full Owner Stack</option>
+              <option>Monthly creative support</option>
+            </select>
+          </label>
+          <label>
+            What do you need?
+            <textarea name="projectDetails" rows="5" required placeholder="Give me the project, deadline, and links if you have them."></textarea>
+          </label>
+          <button type="submit">Send Project</button>
+          <p id="forHireMessage" class="fine-print" role="status">I will get the project details and follow up.</p>
+        </form>
+      </section>
+    </main>
+
+    <script src="./for-hire.js?v=20260522"></script>
+  </body>
+</html>

@@ -10,6 +10,12 @@ Live site:
 https://innergclaw.github.io/owner-stack/
 ```
 
+For Hire page:
+
+```text
+https://innergclaw.github.io/owner-stack/for-hire.html
+```
+
 ## Preview
 
 Run the page locally from this folder:
