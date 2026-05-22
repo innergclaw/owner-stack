@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Owner Stack | OwnYourWeb</title>
+    <meta
+      name="description"
+      content="Unlock The Owner Stack and learn the five pieces every business needs to turn attention into useful infrastructure."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="is-locked">
+    <div id="emailGate" class="email-gate" role="dialog" aria-modal="true" aria-labelledby="gateTitle">
+      <form id="leadForm" class="gate-panel" name="owner-stack-access" method="post" data-netlify="true">
+        <input type="hidden" name="form-name" value="owner-stack-access" />
+        <input type="hidden" name="source" value="Owner Stack Website Gate" />
+        <label class="honeypot" aria-hidden="true">
+          Website
+          <input name="website" tabindex="-1" autocomplete="off" />
+        </label>
+        <p class="eyebrow">Unlock the free owner stack</p>
+        <h2 id="gateTitle">Drop your email to open the full stack details.</h2>
+        <p>
+          Get instant access to the Logo + Identity, Domain + Website, Lead Form,
+          Payment Flow, and Email List buildout.
+        </p>
+        <label>
+          Name
+          <input name="name" autocomplete="name" required placeholder="Your name" />
+        </label>
+        <label>
+          Email
+          <input name="email" type="email" autocomplete="email" required placeholder="you@example.com" />
+        </label>
+        <button type="submit">Unlock Full Stack</button>
+        <p id="formMessage" class="fine-print" role="status">
+          Instant access opens after you submit.
+        </p>
+      </form>
+    </div>
+
+    <main class="page-shell" aria-live="polite">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Free Owner Stack Starter Kit</p>
+          <h1>The website system behind serious small businesses.</h1>
+          <p class="lede">
+            A website is not just a page. It is the infrastructure that turns attention into leads,
+            payments, follow-up, and repeatable growth.
+          </p>
+          <div id="unlockBanner" class="unlock-banner" hidden>
+            <span>Unlocked</span>
+            <p>The full Owner Stack details are open below.</p>
+          </div>
+        </div>
+
+        <figure class="poster-wrap">
+          <img
+            src="./assets/owner-stack-cover.png"
+            alt="The Owner Stack poster showing logo, domain, lead form, payment flow, and email list blocks."
+          />
+        </figure>
+      </section>
+
+      <section class="stack-strip" aria-label="Owner Stack pieces">
+        <article>
+          <span>01</span>
+          <h2>Logo + Identity</h2>
+          <p>Make your business recognizable and trusted.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h2>Domain + Website</h2>
+          <p>Give your audience an owned place to land.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h2>Lead Form</h2>
+          <p>Turn attention into contacts you can follow up with.</p>
+        </article>
+        <article>
+          <span>04</span>
+          <h2>Payment Flow</h2>
+          <p>Make it easy to pay, deposit, book, or request work.</p>
+        </article>
+        <article>
+          <span>05</span>
+          <h2>Email List</h2>
+          <p>Own the relationship beyond the algorithm.</p>
+        </article>
+      </section>
+
+      <section id="stackDetails" class="stack-details" tabindex="-1">
+        <div class="section-head">
+          <p class="eyebrow">Full Stack Details</p>
+          <h2>Build the five pieces in the right order.</h2>
+          <p>
+            The goal is simple: stop sending attention into random inboxes and dead links.
+            Build a system that captures, sells, and follows up every time.
+          </p>
+        </div>
+
+        <div class="detail-grid">
+          <article class="detail-card accent-lime">
+            <span>01</span>
+            <h3>Logo + Identity</h3>
+            <p class="detail-lede">Your first trust signal.</p>
+            <ul>
+              <li>Clean logo that reads fast on phone screens.</li>
+              <li>Two to four brand colors that stay consistent everywhere.</li>
+              <li>Simple type system for flyers, website, invoices, and posts.</li>
+            </ul>
+            <strong>Build next: one primary logo, one icon mark, one brand sheet.</strong>
+          </article>
+
+          <article class="detail-card accent-orange">
+            <span>02</span>
+            <h3>Domain + Website</h3>
+            <p class="detail-lede">Your owned home base.</p>
+            <ul>
+              <li>Short domain people can remember, say, and type.</li>
+              <li>Homepage that says what you do, who it is for, and what to do next.</li>
+              <li>Service page or offer block that turns interest into action.</li>
+            </ul>
+            <strong>Build next: domain, homepage, offer section, contact route.</strong>
+          </article>
+
+          <article class="detail-card accent-red">
+            <span>03</span>
+            <h3>Lead Form</h3>
+            <p class="detail-lede">The bridge from viewer to prospect.</p>
+            <ul>
+              <li>Ask for only what you need: name, email, and one intent question.</li>
+              <li>Send every lead into one place so follow-up is never lost.</li>
+              <li>Trigger a thank-you message or next-step email immediately.</li>
+            </ul>
+            <strong>Build next: embedded form, lead storage, confirmation message.</strong>
+          </article>
+
+          <article class="detail-card accent-blue">
+            <span>04</span>
+            <h3>Payment Flow</h3>
+            <p class="detail-lede">The path from yes to paid.</p>
+            <ul>
+              <li>Payment link for deposits, consults, products, or starter offers.</li>
+              <li>Clear receipt and onboarding instructions after payment.</li>
+              <li>One simple checkout route before building complicated systems.</li>
+            </ul>
+            <strong>Build next: payment link, checkout page, post-payment email.</strong>
+          </article>
+
+          <article class="detail-card accent-lime">
+            <span>05</span>
+            <h3>Email List</h3>
+            <p class="detail-lede">The relationship you own.</p>
+            <ul>
+              <li>Welcome email that reminds people why they signed up.</li>
+              <li>Weekly value email that builds trust before the sale.</li>
+              <li>Offer email that moves warm attention into a real next step.</li>
+            </ul>
+            <strong>Build next: welcome email, tags, first 3-message sequence.</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="audit-section">
+        <div class="section-head">
+          <p class="eyebrow">Owner Stack Audit</p>
+          <h2>Check what is missing right now.</h2>
+        </div>
+        <div class="audit-list">
+          <label><input type="checkbox" /> My brand looks consistent across website, social, and payments.</label>
+          <label><input type="checkbox" /> My domain is easy to remember and points to the right website.</label>
+          <label><input type="checkbox" /> My homepage makes the offer clear within five seconds.</label>
+          <label><input type="checkbox" /> My lead form captures contacts into one list or CRM.</label>
+          <label><input type="checkbox" /> My payment flow can collect money without a manual back-and-forth.</label>
+          <label><input type="checkbox" /> My email list has a welcome message and follow-up sequence.</label>
+        </div>
+      </section>
+
+      <section class="launch-plan">
+        <div class="section-head">
+          <p class="eyebrow">7-Day Build Path</p>
+          <h2>Move from scattered links to owned infrastructure.</h2>
+        </div>
+        <ol>
+          <li><span>Day 1</span> Pick the offer and the one action visitors should take.</li>
+          <li><span>Day 2</span> Lock the domain, logo, colors, and simple brand rules.</li>
+          <li><span>Day 3</span> Build the homepage with a clear headline, proof, and CTA.</li>
+          <li><span>Day 4</span> Add the lead form and connect submissions to your list.</li>
+          <li><span>Day 5</span> Add a payment link or checkout route for the starter offer.</li>
+          <li><span>Day 6</span> Write the welcome email and first follow-up message.</li>
+          <li><span>Day 7</span> Test the whole path from visitor to lead to paid customer.</li>
+        </ol>
+      </section>
+
+      <section class="cta-band">
+        <p class="eyebrow">OwnYourWeb</p>
+        <h2>Need the stack built instead of just planned?</h2>
+        <p>
+          Start with the essentials: identity, domain, website, lead capture, payments,
+          and follow-up infrastructure.
+        </p>
+        <a href="https://ownyourweb.xyz">Start My Owner Stack</a>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
