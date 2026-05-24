@@ -15,14 +15,19 @@
       <section class="for-hire-hero">
         <div class="for-hire-copy">
           <p class="eyebrow">For Hire</p>
-          <h1>Businesses need designers again.</h1>
+          <h1>Design that makes your business look real fast.</h1>
           <p class="lede">
-            ChatGPT can draft ideas. It cannot own the taste, layout, polish, print files,
-            campaign system, or business flow. That is where I come in.
+            I build brand systems, campaign assets, and conversion-ready web infrastructure for businesses that need more than random graphics. The goal is simple: make you look official, make the offer clear, and make the next step easy to take.
           </p>
           <div class="hire-actions" aria-label="For hire actions">
             <a class="button-link button-lime" href="#hireForm">Start a Project</a>
             <a class="button-link button-paper" href="https://ownyourweb.xyz">View OwnYourWeb</a>
+          </div>
+          <div class="hire-signal-box">
+            <span>Pricing starts with a clear entry point.</span>
+            <p>
+              Every project is customized based on goals, integrations, and scale. That means you get a real scoped solution — not a random flat quote disconnected from what the business actually needs.
+            </p>
           </div>
         </div>
 
@@ -51,6 +56,25 @@
             visual rollout that makes attention useful: clear identity, strong campaign assets,
             a website path, a lead form, a payment route, and a follow-up list.
           </p>
+        </div>
+
+        <div class="trust-strip" aria-label="Trust signals">
+          <article>
+            <strong>Clear Scope</strong>
+            <p>You know what is being built, what it does, and what comes next.</p>
+          </article>
+          <article>
+            <strong>Custom Fit</strong>
+            <p>Every project is shaped around your goals, your stack, and your scale.</p>
+          </article>
+          <article>
+            <strong>Business First</strong>
+            <p>I am building infrastructure, not just decoration for the timeline.</p>
+          </article>
+          <article>
+            <strong>Serious Inquiries</strong>
+            <p>Entry-point pricing helps both of us avoid misaligned $50-budget conversations.</p>
+          </article>
         </div>
 
         <div class="hire-grid">
@@ -89,6 +113,30 @@
         </div>
       </section>
 
+      <section class="hire-pricing">
+        <div class="section-head">
+          <p class="eyebrow">How Pricing Works</p>
+          <h2>Start with the right entry point. Build the real solution from there.</h2>
+          <p>
+            Every project is customized based on goals, integrations, and scale. That creates trust early, helps people self-qualify, and keeps room for stronger infrastructure builds when the business actually needs them.
+          </p>
+        </div>
+        <div class="pricing-notes">
+          <article>
+            <h3>Not a cheap menu board</h3>
+            <p>The framing is not “pick the cheapest website.” It is “here is the right entry point — now let’s architect the real solution together.”</p>
+          </article>
+          <article>
+            <h3>Signals before contact</h3>
+            <p>Pricing is no longer invisible. People should know there is real value, real scope, and a real budget expectation before they reach out.</p>
+          </article>
+          <article>
+            <h3>Built for serious clients</h3>
+            <p>This filters out low-budget mismatches and makes room for clients who need credibility, flow, and infrastructure that can actually grow with them.</p>
+          </article>
+        </div>
+      </section>
+
       <section class="hire-packages">
         <div class="section-head">
           <p class="eyebrow">Available For</p>
@@ -96,25 +144,32 @@
         </div>
         <div class="package-grid">
           <article>
+            <span class="package-kicker">Entry Point</span>
             <h3>Starter Design Push</h3>
             <p>One strong piece of visual work for a flyer, event, promo, product, or campaign.</p>
+            <p class="package-note">Best for businesses that need one clean, high-impact asset first.</p>
           </article>
           <article>
+            <span class="package-kicker">Infrastructure Build</span>
             <h3>Owner Stack Build</h3>
             <p>Identity, landing page, form, payment route, and follow-up structure for a serious offer.</p>
+            <p class="package-note">Built for businesses that need a real conversion path, not just a page.</p>
           </article>
           <article>
+            <span class="package-kicker">Ongoing Support</span>
             <h3>Monthly Creative Support</h3>
             <p>Ongoing graphics, campaign updates, web edits, and rollout support for businesses moving fast.</p>
+            <p class="package-note">Ideal when you need consistent visuals, updates, and momentum.</p>
           </article>
         </div>
+        <p class="packages-disclaimer">Every project is scoped based on goals, integrations, and scale. If your business needs more than the entry point, I build the next layer with you.</p>
       </section>
 
       <section class="hire-form-section" id="hireForm">
         <div class="section-head">
           <p class="eyebrow">Start Here</p>
-          <h2>Tell me what you need designed.</h2>
-          <p>Send the project, deadline, and where the design needs to live: web, print, social, email, or all of it.</p>
+          <h2>Tell me what you need built.</h2>
+          <p>Send the project, deadline, budget range, and where the work needs to live: web, print, social, email, or all of it.</p>
         </div>
 
         <form id="forHireForm" class="hire-form" method="post">
@@ -143,11 +198,21 @@
             </select>
           </label>
           <label>
+            Budget Range
+            <select name="budgetRange" required>
+              <option value="">Choose one</option>
+              <option>$150–$300</option>
+              <option>$300–$750</option>
+              <option>$750–$1,500</option>
+              <option>$1,500+</option>
+            </select>
+          </label>
+          <label>
             What do you need?
-            <textarea name="projectDetails" rows="5" required placeholder="Give me the project, deadline, and links if you have them."></textarea>
+            <textarea name="projectDetails" rows="5" required placeholder="Give me the project, deadline, budget context, and links if you have them."></textarea>
           </label>
           <button type="submit">Send Project</button>
-          <p id="forHireMessage" class="fine-print" role="status">I will get the project details and follow up.</p>
+          <p id="forHireMessage" class="fine-print" role="status">I will review the scope, budget, and deadline, then follow up with the right next step.</p>
         </form>
       </section>
     </main>
