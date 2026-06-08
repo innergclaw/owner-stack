@@ -59,7 +59,7 @@ TELEGRAM_BOT_TOKEN=your_bot_token
 TELEGRAM_OWNER_STACK_CHAT_ID=-1003997964845
 ```
 
-After those are set, each submitted lead will send a Telegram message with name, email, source, page URL, referrer, and submit time.
+After those are set, each submitted lead will send a Telegram message with name, email, phone number, source, page URL, referrer, and submit time.
 
 Keep `TELEGRAM_BOT_TOKEN` out of `script.js`. It belongs only in Supabase secrets.
 

@@ -180,6 +180,10 @@
             <input name="email" type="email" autocomplete="email" required placeholder="you@example.com" />
           </label>
           <label>
+            Phone Number
+            <input name="phone" type="tel" autocomplete="tel" inputmode="tel" required placeholder="Best number for a text or call" />
+          </label>
+          <label>
             Project Type
             <select name="projectType" required>
               <option value="">Choose one</option>
@@ -210,7 +214,7 @@
             <textarea name="projectDetails" rows="5" required placeholder="Give me the project, deadline, budget context, and links if you have them."></textarea>
           </label>
           <button type="submit">Send Project</button>
-          <p id="forHireMessage" class="fine-print" role="status">I will review the scope, budget, and deadline, then follow up with the right next step.</p>
+          <p id="forHireMessage" class="fine-print" role="status">I will review the scope, budget, and deadline, then follow up by email, text, or call.</p>
         </form>
       </section>
     </main>

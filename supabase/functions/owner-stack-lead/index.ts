@@ -1,9 +1,14 @@
 import "jsr:@supabase/functions-js/edge-runtime.d.ts";
 import { createClient } from "npm:@supabase/supabase-js@2";
 
+declare const EdgeRuntime: {
+  waitUntil(promise: Promise<unknown>): void;
+};
+
 type LeadPayload = {
   name?: string;
   email?: string;
+  phone?: string;
   source?: string;
   pageUrl?: string;
   referrer?: string;
@@ -80,6 +85,7 @@ function buildTelegramMessage(lead: {
   id: string;
   name: string;
   email: string;
+  phone: string;
   source: string;
   page_url: string;
   referrer: string;
@@ -97,6 +103,7 @@ function buildTelegramMessage(lead: {
     "",
     `Name: ${lead.name || "Not provided"}`,
     `Email: ${lead.email}`,
+    `Phone: ${lead.phone || "Not provided"}`,
     `Source: ${lead.source}`,
     ...(lead.project_type ? [`Project Type: ${lead.project_type}`] : []),
     ...(lead.project_details ? [`Project Details: ${lead.project_details}`] : []),
@@ -111,6 +118,7 @@ async function notifyTelegram(lead: {
   id: string;
   name: string;
   email: string;
+  phone: string;
   source: string;
   page_url: string;
   referrer: string;
@@ -175,6 +183,10 @@ Deno.serve(async (req) => {
   if (!isValidEmail(email)) {
     return json(req, { ok: false, error: "A valid email is required" }, 400);
   }
+  const phone = clean(body.phone, 80);
+  if (!phone) {
+    return json(req, { ok: false, error: "A phone number is required" }, 400);
+  }
 
   const supabaseUrl = Deno.env.get("SUPABASE_URL");
   const serviceRoleKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
@@ -186,6 +198,7 @@ Deno.serve(async (req) => {
   const leadRow = {
     name: clean(body.name, 200),
     email,
+    phone,
     source: clean(body.source, 200) || "Owner Stack Website Gate",
     page_url: clean(body.pageUrl, 1000),
     referrer: clean(body.referrer, 1000) || "Direct / unknown",
@@ -197,7 +210,7 @@ Deno.serve(async (req) => {
   const { data: insertedLead, error: insertError } = await supabase
     .from("owner_stack_leads")
     .insert(leadRow)
-    .select("id, name, email, source, page_url, referrer, created_at")
+    .select("id, name, email, phone, source, page_url, referrer, created_at")
     .single();
 
   if (insertError) {
